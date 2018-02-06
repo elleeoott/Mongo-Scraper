@@ -1,0 +1,20 @@
+{
+  "name": "mongo-scraper",
+  "version": "1.0.0",
+  "description": "dependencies for mongo scraper app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edarst/Mongo-Scraper.git"
+  },
+  "author": "Evan Darst, 2018",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edarst/Mongo-Scraper/issues"
+  },
+  "homepage": "https://github.com/edarst/Mongo-Scraper#readme"
+}

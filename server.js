@@ -34,28 +34,11 @@ app.get("/scrape", function(req, res) {
 
     var $ = cheerio.load(response.data);
 
-    $("h3.lakeside__title").each(function(i, element) {
+    $("p.title").each(function(i, element) {
 
         var result = {};
 
-        result.title = $(this)
-        .children("a")
-        .text();
-        result.link = $(this)
-        .children("a")
-        .attr("href");
-
-        db.Article.create(result)
-        .then(function(dbArticle) {
-
-            console.log(dbArticle);
-        })
-        .catch(function(err) {
-
-            return res.json(err);
-        });
     });
 
-    res.send("Scrape is complete");
     });
 });

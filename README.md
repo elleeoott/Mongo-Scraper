@@ -8,7 +8,7 @@ Full-stack app designed to pull the latest top posts from /r/ soccer. Users can 
 * Run npm install
 * Run the app using node app.js
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OefxY2uW44Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Watch it in action](https://youtu.be/OefxY2uW44Y)
 
 #### Technologies
 

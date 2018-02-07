@@ -26,22 +26,22 @@ app.use(express.static("public"));
 
 //ROUTES    
 
-//get route to scrape reddit.com/r/soccer
+//get route to scrape BBC site
 
 app.get("/scrape", function(req, res) {
 
-    axios.get("https://www.reddit.com/r/soccer/").then(function(response) {
+    axios.get("http://www.bbc.com/sport/football").then(function(response) {
 
     var $ = cheerio.load(response.data);
 
-    $("a.title").each(function(i, element) {
+    $("h3.lakeside__title").each(function(i, element) {
 
         var result = {};
 
         result.title = $(this)
         .children("a")
         .text();
-      result.link = $(this)
+        result.link = $(this)
         .children("a")
         .attr("href");
 

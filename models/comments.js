@@ -1,29 +1,8 @@
-var schema = mongoose.Schema;
 var mongoose = require("mongoose");
 
-var artSchema = new Schema({
+var comSchema = new mongoose.Schema({
 
-    title: {
-
-        type: String,
-        required: true
-    },
-
-    url: {
-
-        type: String,
-        required: true
-    },
-
-    saved: {
-
-        type: Boolean,
-        default: false
-    }
-    
-    //reference comments as an array, something to do with object ID
+    artCom: String
 });
 
-var Article = mongoose.model("Article", artSchema);
-
-module.exports = Article;
+module.exports = Comments;

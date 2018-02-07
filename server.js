@@ -17,28 +17,43 @@ var PORT = 3000;
 
 var app = express();
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {
+  useMongoClient: true
+});
+
 //debugging and body parsing for forms
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
-//initialize mongoose to connect through deployed heroku app
 
 //ROUTES    
 
-//get route to scrape BBC site
+//get route to scrape site
 
 app.get("/scrape", function(req, res) {
 
-    axios.get("http://www.bbc.com/sport/football").then(function(response) {
+    axios.get("https://www.reddit.com/r/soccer/").then(function(response) {
 
     var $ = cheerio.load(response.data);
+    var results = {};
 
     $("p.title").each(function(i, element) {
 
+        //text of titles are stored
         var result = {};
+        var title = $(element).text();
 
     });
 
     });
 });
+
+//trying out ES6
+
+app.listen(PORT, () => console.log(`Listening on " + ${PORT}`));

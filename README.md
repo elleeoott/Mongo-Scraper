@@ -10,7 +10,7 @@ Full-stack app designed to pull the latest top posts from /r/ soccer. Users can 
 
 [Watch it in action on YouTube](https://youtu.be/OefxY2uW44Y).
 
-[Image here](https://i.imgur.com/7YinhgX.png)
+<img src="https://i.imgur.com/7YinhgX.png" alt="Test">
 
 #### Technologies
 

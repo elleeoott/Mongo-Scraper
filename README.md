@@ -8,7 +8,9 @@ Full-stack app designed to pull the latest top posts from /r/ soccer. Users can 
 * Run npm install
 * Run the app using node app.js
 
-[Watch it in action](https://youtu.be/OefxY2uW44Y)
+[Watch it in action on YouTube](https://youtu.be/OefxY2uW44Y).
+
+[Image here](https://i.imgur.com/7YinhgX.png "This is an image")
 
 #### Technologies
 
